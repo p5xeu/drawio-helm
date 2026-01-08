@@ -1,0 +1,22 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: drawio-service
+  namespace: {{ .Values.tmpnamespace }}
+spec:
+  ipFamilies:
+    - IPv4
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: {{ .Values.port }}
+  internalTrafficPolicy: Cluster
+  type: ClusterIP
+  ipFamilyPolicy: SingleStack
+  sessionAffinity: None
+  selector:
+    app: drawio
+status:
+  loadBalancer: {}
+...

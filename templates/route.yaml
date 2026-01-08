@@ -1,0 +1,21 @@
+{{ if .Values.create_route }}
+---
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: drawio-route
+  namespace: {{ .Values.tmpnamespace }}
+spec:
+  host: drawio.apps.jmauser.paas.noris.dev
+  to:
+    kind: Service
+    name: drawio-service
+    weight: 100
+  port:
+    targetPort: {{ .Values.port }}
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
+  wildcardPolicy: None
+...
+{{ end }}
