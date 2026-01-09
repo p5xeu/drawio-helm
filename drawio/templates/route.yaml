@@ -4,7 +4,6 @@ kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
   name: drawio-route
-  namespace: {{ .Values.tmpnamespace }}
 spec:
   host: {{ .Values.extUrl }}
   to:
