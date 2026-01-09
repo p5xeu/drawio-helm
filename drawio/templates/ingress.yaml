@@ -3,7 +3,7 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: drawio
+  name: drawio-ingress
 spec:
   ingressClassName: openshift-default
   tls:
@@ -18,7 +18,7 @@ spec:
             pathType: ImplementationSpecific
             backend:
               service:
-                name: drawio
+                name: drawio-service
                 port:
                   number: 80
 ...
