@@ -3,7 +3,6 @@
 replicaCount: 3
 
 image_repo: "jgraph/drawio"
-version: "latest"
 
 port: 8080
 

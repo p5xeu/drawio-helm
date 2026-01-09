@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: drawio
-          image: "{{ .Values.image_repo }}:{{ .Values.version }}"
+          image: "{{ .Values.image_repo }}:{{ .Chart.AppVersion }}"
           ports:
             - containerPort: {{ .Values.port }}
               protocol: TCP
