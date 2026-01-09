@@ -6,7 +6,7 @@ metadata:
   name: drawio-route
   namespace: {{ .Values.tmpnamespace }}
 spec:
-  host: drawio.apps.jmauser.paas.noris.dev
+  host: {{ .Values.extUrl }}
   to:
     kind: Service
     name: drawio-service

@@ -6,6 +6,8 @@ image_repo: "jgraph/drawio"
 
 port: 8080
 
+extUrl: "drawio.yourdomain.com"
+
 create_route: true
 create_networkpolicy: true
 
